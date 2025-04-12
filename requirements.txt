@@ -1,9 +1,9 @@
 # Core
-python>=25.0.1
+# python>=25.0.1
 streamlit>=1.32.0
 numpy
 Pillow
-opencv-python
+opencv-python-headless
 matplotlib
 scikit-image
 scipy
