@@ -30,7 +30,7 @@ class DenseDepth(nn.Module):
 # ✅ Inference helper
 model = DenseDepth()
 base_path = os.path.dirname(os.path.abspath(__file__))
-weights_path = os.path.join(base_path, '../weights.pth')
+weights_path = os.path.join(base_path, '../densedepth_weights.pth')
 weights_path = os.path.normpath(weights_path)
 model.load_state_dict(torch.load(weigths_path, map_location=torch.device("cpu")))
 model.eval()
