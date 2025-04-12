@@ -6,6 +6,7 @@ opencv-python
 matplotlib
 scikit-image
 scipy
+cv2
 
 # Torch and vision
 torch
