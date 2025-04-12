@@ -98,7 +98,7 @@ class DepthAnythingCustom(nn.Module):
 
 # Load model
 model = DepthAnythingCustom(pretrained=False)
-checkpoint = torch.load("models/depth_anything_weights.pth", map_location=device)
+checkpoint = torch.load("../depth_anything_weights.pth", map_location=device)
 model.load_state_dict(checkpoint["model_state_dict"])
 model.eval().to(device)
 
