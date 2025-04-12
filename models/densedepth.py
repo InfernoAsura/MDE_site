@@ -28,7 +28,7 @@ class DenseDepth(nn.Module):
 
 # ✅ Inference helper
 model = DenseDepth()
-model.load_state_dict(torch.load("models/densedepth_weights.pth", map_location=torch.device("cpu")))
+model.load_state_dict(torch.load("../densedepth_weights.pth", map_location=torch.device("cpu")))
 model.eval()
 model.to("cpu")
 
