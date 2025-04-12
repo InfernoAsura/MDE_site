@@ -5,6 +5,7 @@ import torchvision.transforms as T
 from PIL import Image
 import numpy as np
 import cv2
+import os
 
 class DenseDepth(nn.Module):
     def __init__(self):
@@ -28,7 +29,10 @@ class DenseDepth(nn.Module):
 
 # ✅ Inference helper
 model = DenseDepth()
-model.load_state_dict(torch.load("../densedepth_weights.pth", map_location=torch.device("cpu")))
+base_path = os.path.dirname(os.path.abspath(__file__))
+weights_path = os.path.join(base_path, '../weights.pth')
+weights_path = os.path.normpath(weights_path)
+model.load_state_dict(torch.load(weigths_path, map_location=torch.device("cpu")))
 model.eval()
 model.to("cpu")
 
